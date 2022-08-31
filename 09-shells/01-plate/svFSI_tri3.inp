@@ -9,6 +9,7 @@ Spectral radius of infinite time step: 0.50
 Searched file name to trigger stop: STOP_SIM
 
 Save results to VTK format: 1
+Save results in folder: tri3
 Name prefix of saved VTK files: result
 Increment in saving VTK files: 10
 Start saving after time step: 1
@@ -37,6 +38,8 @@ Add mesh: msh {
    Add face: top {
       Face file path: ./mesh/tri3/mesh-surfaces/y1.vtp
    }
+   Fiber direction: ( 0.70710678118,  0.70710678118, 0.0)
+   Fiber direction: ( 0.70710678118,  -0.70710678118, 0.0)
 }
 
 #----------------------------------------------------------------
@@ -50,8 +53,29 @@ Add equation: shell {
    Density: 0.0
    Mass damping: 1.0
    Elasticity modulus: 12.0
-   Poisson ratio: 0.0
+   Poisson ratio: 0.5
    Shell thickness: 1.0
+   Constitutive model: Lee-Sacks {
+      a:    0.1
+      a0:   0.1
+      b1:   0.3
+      b2:   0.5
+      mu0:  0.5
+   }
+   #Constitutive model: HO-ma {
+   #   a:     1.0
+   #   b:     1.0
+   #   a4f:   1.0
+   #   b4f:   1.0
+   #   a4s:   1.0
+   #   b4s:   1.0
+   #   afs:   1.0
+   #   bfs:   1.0
+   #}
+   #Constitutive model: MR {
+   #   c1:    1.0
+   #   c2:    1.0
+   #}
 
    Output: Spatial {
       Displacement: t
