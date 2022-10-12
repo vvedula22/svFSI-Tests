@@ -56,25 +56,29 @@ Add equation: shell {
    #   a0:   3.0
    #   b1:   0.3
    #   b2:   1.0
-   #   mu0:  1.0
+   #   mu0:  0.5
    #}
-   Constitutive model: HO-ma {
-      a:     0.2
-      b:     1.0
-      a4f:   1.0
-      b4f:   1.0
-      a4s:   0.0
-      b4s:   1.0
-      afs:   0.0
-      bfs:   1.0
+   #Constitutive model: HO-ma {
+   #   a:     1.0
+   #   b:     1.0
+   #   a4f:   1.0
+   #   b4f:   1.0
+   #   a4s:   0.0
+   #   b4s:   1.0
+   #   afs:   0.0
+   #   bfs:   1.0
+   #}
+   Constitutive model: MR {
+      c1:    1.0
+      c2:    0.5
    }
-   #Constitutive model: MR {
-   #   c1:    1.0
-   #   c2:    1.0
-   #}
    
    Output: Spatial {
       Displacement: t
+   #   Strain: t
+      Stress: t
+   #   Cauchy_stress: t
+   #   VonMises_stress: t
    }
 
    LS type: GMRES
