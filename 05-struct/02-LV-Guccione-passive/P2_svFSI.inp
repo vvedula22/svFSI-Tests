@@ -48,7 +48,7 @@ Add equation: struct {
    Constitutive model: Gucci {
       C:   1.0e4
       bf:  1.0
-      bt:  1.0
+      bs:  1.0
       bfs: 1.0
    }
 
@@ -63,6 +63,7 @@ Add equation: struct {
       Displacement: t
       Velocity: t
       Jacobian: t
+      VonMises_stress: t
    }
 
    LS type: BICG
