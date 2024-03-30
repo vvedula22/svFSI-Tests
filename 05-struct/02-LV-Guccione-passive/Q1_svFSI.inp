@@ -54,6 +54,7 @@ Add equation: struct {
 
    Density: 1e-3
    Elasticity modulus: 1.0
+   Viscosity: potential {Value: 0.0}
 
    Poisson ratio: 0.5
    Dilational penalty model: ST91
@@ -63,6 +64,12 @@ Add equation: struct {
       Displacement: t
       Velocity: t
       Jacobian: t
+      Stress: t
+      Strain: t
+      Cauchy_stress: t
+      Cauchy_strain: t
+      Cauchy_strain_trace: t
+      VonMises_stress: t
    }
 
    LS type: BICG

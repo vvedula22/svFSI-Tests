@@ -49,6 +49,7 @@ Add equation: ustruct {
    Density: 1e-3
    Elasticity modulus: 2.0e5  # used for computing tauM/tauC
    Poisson ratio: 0.5
+   Viscosity: potential {Value: 0.0}
 
    Constitutive model: Gucci {
       C:   2.0e3
@@ -67,15 +68,18 @@ Add equation: ustruct {
 
    Output: Spatial {
       Displacement: t
-      Velocity: t
       Pressure: t
-      Acceleration: t
-      Stress: t
-      Cauchy_stress: t
-      VonMises_stress: t
-      Def_grad: t
-      Strain: t
       Jacobian: t
+      Stress: t
+      Strain: t
+      Cauchy_stress: t
+      Cauchy_strain: t
+      Cauchy_strain_trace: t
+      Def_grad: t
+      VonMises_stress: t
+      Fiber_direction: t
+      Fiber_stretch: t
+      Active: t
    }
 
    LS type: GMRES

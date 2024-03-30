@@ -63,16 +63,22 @@ Add equation: ustruct {
    Poisson ratio: 0.5
    Dilational penalty model: ST91
    Penalty parameter: 4.0E11   # nu ~ 0.4999
+   Viscosity: potential {Value: 0.0}
 
    Momentum stabilization coefficient: 0.0
    Continuity stabilization coefficient: 0.0
 
    Output: Spatial {
       Displacement: t
-      Velocity: t
       Pressure: t
-      Stress: t
       Jacobian: t
+      Stress: t
+      Strain: t
+      Cauchy_stress: t
+      Cauchy_strain: t
+      Cauchy_strain_trace: t
+      Def_grad: t
+      VonMises_stress: t
       Divergence: t
    }
 

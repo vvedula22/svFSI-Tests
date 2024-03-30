@@ -62,16 +62,22 @@ Add equation: ustruct {
    Elasticity modulus: 240.56596E6
    Poisson ratio: 0.4999999
    Dilational penalty model: ST91
+   Viscosity: potential {Value: 0.0}
 
    Momentum stabilization coefficient: 1e-3
    Continuity stabilization coefficient: 1e-3
 
    Output: Spatial {
       Displacement: t
-      Velocity: t
       Pressure: t
-      Stress: t
       Jacobian: t
+      Stress: t
+      Strain: t
+      Cauchy_stress: t
+      Cauchy_strain: t
+      Cauchy_strain_trace: t
+      Def_grad: t
+      VonMises_stress: t
       Divergence: t
    }
 
